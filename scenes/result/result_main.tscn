@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bdml1cd1tqgp7"]
+
+[ext_resource type="Script" uid="uid://bhasiylj4guuv" path="res://scripts/result/result_main.gd" id="1_5fo31"]
+[ext_resource type="Texture2D" uid="uid://bd5f6vorgj8hs" path="res://assets/windows/result/result-main.png" id="2_x1ewm"]
+[ext_resource type="Texture2D" uid="uid://byhbe5k7ryngj" path="res://assets/windows/result/result-cha.png" id="3_c6xhx"]
+[ext_resource type="Texture2D" uid="uid://dsf6rai16vkuj" path="res://assets/windows/result/result-item-window.png" id="4_gng5e"]
+[ext_resource type="Texture2D" uid="uid://dhxvkuh5o7ojf" path="res://assets/windows/result/result-item-lists.png" id="5_eqsk0"]
+
+[node name="ResultMain" type="Control" unique_id=1556428173]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5fo31")
+
+[node name="Frame" type="TextureRect" parent="." unique_id=1857241961]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("2_x1ewm")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Outcome" type="Label" parent="." unique_id=396217216]
+z_index = 2
+layout_mode = 0
+anchor_left = 0.3
+anchor_top = 0.24
+anchor_right = 0.7
+anchor_bottom = 0.34
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+
+[node name="Summary" type="Label" parent="." unique_id=1658952596]
+z_index = 2
+layout_mode = 0
+anchor_left = 0.12
+anchor_top = 0.38
+anchor_right = 0.88
+anchor_bottom = 0.65
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="." unique_id=2104577790]
+z_index = 2
+layout_mode = 0
+anchor_left = 0.42
+anchor_top = 0.8
+anchor_right = 0.58
+anchor_bottom = 0.88
+theme_override_font_sizes/font_size = 24
+text = "Continue"
+
+[node name="CharacterCard" type="TextureRect" parent="." unique_id=1163175328]
+layout_mode = 0
+anchor_left = 0.08
+anchor_top = 0.34
+anchor_right = 0.48
+anchor_bottom = 0.62
+mouse_filter = 2
+texture = ExtResource("3_c6xhx")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ItemsWindow" type="TextureRect" parent="." unique_id=1340715228]
+layout_mode = 0
+anchor_left = 0.52
+anchor_top = 0.32
+anchor_right = 0.92
+anchor_bottom = 0.72
+mouse_filter = 2
+texture = ExtResource("4_gng5e")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ItemRow" type="TextureRect" parent="." unique_id=1627006366]
+layout_mode = 0
+anchor_left = 0.56
+anchor_top = 0.43
+anchor_right = 0.88
+anchor_bottom = 0.51
+mouse_filter = 2
+texture = ExtResource("5_eqsk0")
+expand_mode = 1
+stretch_mode = 6
