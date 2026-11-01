@@ -34,3 +34,12 @@ Presentation may read application/domain results, but domain code must not depen
 ## Validation direction
 
 Put deterministic rule tests around battle resolution, encounter outcomes, world progression, and ending selection. Run Godot smoke tests for scene/resource integration and browser/mobile responsiveness once those scenes exist.
+
+## Resolution and scaling policy
+
+SDQuest's initial design canvas is **2560 x 1440 (2K, 16:9)**. Godot uses `canvas_items` stretching with an `expand` aspect policy so the same authored layout scales for browser and mobile targets while wider displays gain extra usable space.
+
+- Treat 2560 x 1440 as the reference for new scene layouts, typography, and art placement.
+- Prefer anchors, containers, and relative placement for UI; do not rely on a single physical display size.
+- Test key screens at the 2K reference size and at narrower mobile/browser sizes before calling responsive UI complete.
+- Keep gameplay coordinates and combat rules independent of display resolution.

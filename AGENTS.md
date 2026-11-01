@@ -17,6 +17,7 @@
 - Keep monster definitions separate from encounter definitions, and character/job definitions separate from runtime party members.
 - Do not hardcode content, combat rules, or encounter data directly into battle UI scripts or scenes.
 - Use Godot MCP for useful editor, project, scene, node, and runtime inspection. Use scene/node tools rather than hand-editing `.tscn` files.
+- Follow the resolution and scaling policy in `docs/architecture/godot-architecture.md`; author responsive UI against the 2K reference canvas rather than a single physical display size.
 - Keep changes scoped to the requested task; do not add speculative gameplay, assets, scenes, or unrelated refactors.
 - After meaningful gameplay or system changes, run the relevant validation and inspect Godot errors.
 
